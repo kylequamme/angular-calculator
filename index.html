@@ -16,7 +16,7 @@
     <main>
       <div class="calculator">
         <div class="input-group input-group-lg">
-          <input type="text" id="display" class="form-control" ng-model="display" aria-describedby="sizing-addon1">
+          <input type="text" id="display" class="form-control" ng-model="display" ng-disabled="true" aria-describedby="sizing-addon1">
         </div>
         <div class="row">
           <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(7)">7</button></div>
@@ -51,7 +51,7 @@
         <div class="history">
           <h1>History</h1>
           <ul>
-            <li ng-repeat="equation in history">{{equation}}</li>
+            <li ng-repeat="equation in history track by $index">{{equation}}</li>
           </ul>
         </div>
 
