@@ -5,8 +5,8 @@ var fullEquation = '';
 angular.module('myAngularApp').controller('AppController', function($scope){
   $scope.display = '';
   $scope.history = [];
-  $scope.putChar = function(num){
-    equation += num;
+  $scope.putChar = function(char){
+    equation += char;
     $scope.display = equation;
   }
   $scope.solveEquation = function(){
