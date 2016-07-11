@@ -4,10 +4,17 @@
   padding: 20px;
   background-color: rgb(166, 166, 166);
   border-radius: 15px;
+  -webkit-box-shadow: 5px 10px 10px 5px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 10px 10px 5px rgba(0,0,0,0.75);
+  box-shadow: 5px 10px 10px 5px rgba(0,0,0,0.75);
 }
 #display{
   display: inline;
   width: 460px;
+  margin: 20px 0;
+  -webkit-box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.75);
+  box-shadow: 6px 6px 10px 1px rgba(0,0,0,0.75);
 }
 .row{
   width: 460px;
