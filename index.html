@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html ng-app="myAngularApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Angular Calculator</title>
+    <link href="cssReset.css" rel="stylesheet" />
+    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="./node_modules/mathjs/dist/math.min.js"></script>
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="controller.js"></script>
+  </head>
+  <body ng-controller="AppController">
+    <main>
+      <div class="calculator">
+        <div class="input-group input-group-lg">
+          <input type="text" id="display" class="form-control" ng-model="display" aria-describedby="sizing-addon1">
+        </div>
+        <div class="row">
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(7)">7</button></div>
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(8)">8</button></div>
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(9)">9</button></div>
+          <div class="col-sm-2"><button class="btn btn-danger" ng-click="clearDisplay()">C</button></div>
+          <div class="col-sm-2"><button class="btn btn-warning" ng-click="putChar('+')">+</button></div>
+          <div class="col-sm-2"><button class="btn btn-warning" ng-click="putChar('-')">-</button></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(4)">4</button></div>
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(5)">5</button></div>
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(6)">6</button></div>
+          <div class="col-sm-2"><button class="btn btn-warning" ng-click="squareRoot()">√</button></div>
+          <div class="col-sm-2"><button class="btn btn-warning" ng-click="putChar('*')">*</button></div>
+          <div class="col-sm-2"><button class="btn btn-warning" ng-click="putChar('/')">/</button></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(1)">1</button></div>
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(2)">2</button></div>
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(3)">3</button></div>
+          <div class="col-sm-2"></div>
+          <div class="col-sm-4"></div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar(0)">0</button></div>
+          <div class="col-sm-2"><button class="btn btn-info" ng-click="putChar('.')">.</button></div>
+          <div class="col-sm-2"><button class="btn btn-success" ng-click="solveEquation()">=</button></div>
+          <div class="col-sm-2"></div>
+          <div class="col-sm-4"></div>
+        </div>
+        <div class="history">
+          <h1>History</h1>
+          <ul>
+            <li ng-repeat="equation in history">{{equation}}</li>
+          </ul>
+        </div>
+
+      </div>
+    </main>
+  </body>
+</html>
